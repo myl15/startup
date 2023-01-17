@@ -5,7 +5,7 @@ This project will be completed over the course of the 2023 Winter Semester.
 Project details can be found on GitHub.
 
 Licensed to Myles Barney.
-#### ***
+#### ------------------------------------------------
 
 IP for webpage is http://3.136.102.1/
 
