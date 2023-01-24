@@ -14,4 +14,4 @@ Domain name is http://oneglobe.click
 
 Webpage is hosted by AWS.
 #### ------------------------------------------------
-Command for SSH is ssh -i [key pair file] ubuntu@[ip address]
+Command for SSH is ssh -i [key pair file] ubuntu@3.136.102.1
