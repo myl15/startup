@@ -7,9 +7,9 @@ Project details can be found on GitHub.
 Licensed to Myles Barney.
 #### ------------------------------------------------
 
-IP for webpage is http://3.136.102.1/
+IP for webpage is https://3.136.102.1/
 
-Domain name is http://oneglobe.click
+Domain name is https://oneglobe.click
 
 
 Webpage is hosted by AWS.
