@@ -16,6 +16,12 @@ Webpage is hosted by AWS.
 #### ------------------------------------------------
 Command for SSH is ssh -i [key pair file] ubuntu@3.136.102.1
 
+# Simon
+The Simon project is all about learning to use basic HTML structures and tools so that they can be applied to the startup website.  As of today I have learned to use basic forms and outputs, hyperlinks and svg drawing.  It has been a great experience for me.
+Here is the link for the Simon [github](https://github.com/myl15/simon) and the Simon page on my [website](https://simon.oneglobe.click/).
+
+
+
 
 # OneGlobe
 ### What is OneGlobe?
