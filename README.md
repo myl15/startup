@@ -17,8 +17,10 @@ Webpage is hosted by AWS.
 Command for SSH is ssh -i [key pair file] ubuntu@3.136.102.1
 
 # Simon
-The Simon project is all about learning to use basic HTML structures and tools so that they can be applied to the startup website.  As of today I have learned to use basic forms and outputs, hyperlinks and svg drawing.  It has been a great experience for me.
+The Simon project is all about learning to use basic HTML structures and tools so that they can be applied to the startup website.  As of the first submission I have learned to use basic forms and outputs, hyperlinks and svg drawing. On the second submission I implemented a CSS stylesheet with formatting for text and div elements.  I also used bootstrap elements to improve formatting and styling of the overall project.
 Here is the link for the Simon [github](https://github.com/myl15/simon) and the Simon page on my [website](https://simon.oneglobe.click/).
+
+
 
 # CodePen
 Links to CodePen assignments can be found on the OneGlobe website, and i will post some here.
