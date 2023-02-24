@@ -88,4 +88,4 @@ svg	  Scalable vector graphic content
 iframe	  Inline frame of another HTML page
 
 ### CSS
-<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/CSS_Notes.png" width="400px"
+<img src="https://github.com/myl15/startup/blob/8340c83802685a0666a070710311ac351287f125/Images/CSS_Notes.png" width="400px"
