@@ -45,8 +45,10 @@ In the modern era, the world feels smaller than ever.  Anyone can find the infor
 <!-- ![Mockup_1](Images/Mockup_1.jpg width=100)
 ![Mockup_2](Images/Mockup_2.jpg width=100)
 ![Mockup_3](Images/Mockup_3.jpg width=100) -->
-<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_1.jpg" width="200px">
-<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_2.jpg" width="200px">
-<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_3.jpg" width="200px">
+<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_1.jpg" width="400px">
+<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_2.jpg" width="400px">
+<img src="https://github.com/myl15/startup/blob/d00aaf76b0dc60a641d3a36620b3438a0a0b5c94/Images/Mockup_3.jpg" width="400px">
 
+## Things To Remember
+### HTML
 
