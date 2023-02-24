@@ -42,8 +42,8 @@ In the modern era, the world feels smaller than ever.  Anyone can find the infor
 ### Link to Website
 #### [OneGlobe](https://oneglobe.click)
 
-![Mockup_1](Images/Mockup_1.jpg | width=100)
-![Mockup_2](Images/Mockup_2.jpg | width=100)
-![Mockup_3](Images/Mockup_3.jpg | width=100)
+![Mockup_1](Images/Mockup_1.jpg width=100)
+![Mockup_2](Images/Mockup_2.jpg width=100)
+![Mockup_3](Images/Mockup_3.jpg width=100)
 
 
