@@ -35,12 +35,26 @@ body {
   animation: show 12s linear;
 }
 
-#you:hover {
-  border:#7542B3 2px solid;
-  animation: grow 5s linear;
-}
-#you:click {
+/* #you:click {
   animation: show 12s linear;
+} */
+
+a:link {
+  text-decoration: none;
+  color: #533294;
+}
+a:visited {
+  text-decoration:none;
+  color:#2e2c31
+}
+a:hover {
+  color:#533294;
+  border:#533294 solid;
+}
+a:active {
+  background-color: #533294;
+  color:#533294;
+  
 }
 
 @keyframes show {
