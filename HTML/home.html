@@ -8,7 +8,7 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <a href="home.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
   <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
 </svg>
@@ -20,23 +20,55 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#btn">Travel</a>
+              <a class="nav-link" href="travel.html">Travel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#card">About Us</a>
+              <a class="nav-link" href="#header2">About Us</a>
             </li>
             <li class="nav-item">
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" <button class="btn btn-outline-success" type="submit"></button>
-          </form>
-        </div>
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+          		<form class="d-flex" role="search">
+           			<input class="form-control me-2" type="search" placeholder="Search" <button class="btn btn-outline-success" type="submit"></button>
+          		</form>
+			</li>
+			<li class="nav-item">
+				<button type="button" class="btn btn-light" data-toggle="modal" data-target="#loginModal">
+					Login
+				  </button>
+			</li>
+		</ul>
+        </div> 
       </div>
     </nav>
   </header>
+
+  <div id="loginModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">Login</h4>
+		</div>
+		<div class="modal-body">
+		  <form class="username">
+			<input></input>
+		  </form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  
 
   <main class="container-fluid">
 
@@ -46,7 +78,7 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
 </body>
 
 <div id="container">
-    <span id="text1">You</span>
+    <span id="text1">Travel</span>
     <span id="text2"></span>
 </div>
 
@@ -74,7 +106,7 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
   <div class="card-body">
     <h5 class="card-title">Our Top 5</h5>
     <p class="card-text">View our top 5 global destinations and learn a little bit about each one along the way.  We promise you won't be disappointed.</p>
-    <a href="#" class="btn btn-outline-secondary">Lets Go</a>
+    <a href="travel.html" class="btn btn-outline-secondary">Lets Go</a>
   </div>
 </div>
   <div class="card" style="width: 18rem;">
@@ -90,8 +122,14 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
 
     <div id="typography" class="demo-box">
       <div class="container-fluid">
-        <h2>What is OneGlobe?</h2>
-        <p class="lead">In the modern era, the world feels smaller than ever. Anyone can find the information they are looking for with a few taps on their phone or clicks on their computer. You can view resource after resource about any destination anywhere on the globe! But, at OneGlobe we believe there is no substitute for real human interaction. That's why we are committed to bridging differences between people in order to make the world feel a little bit safer for everyone. We hope to bring people together as users explore and make exciting discoveries all over the world. OneGlobe is more than a tourism service, and it is more than a social media platform; OneGlobe is a mechanism for real social change all over the world.</p>
+        <h2 id="header2">What is OneGlobe?</h2>
+        <p class="lead">In the modern era, the world feels smaller than ever.  
+			Anyone can find the information they are looking for with a few taps on their phone or clicks on their computer. 
+			You can view resource after resource about any destination anywhere on the globe! 
+			But, at OneGlobe we believe there is no substitute for real human interaction. 
+			That's why we are committed to bridging differences between people in order to make the world feel a little bit safer for everyone. 
+			We hope to bring people together as users explore and make exciting discoveries all over the world. 
+			OneGlobe is more than a tourism service, and it is more than a social media platform; OneGlobe is a mechanism for real social change all over the world.</p>
 
         <figure class="text-center">
           <blockquote class="blockquote">
@@ -115,6 +153,8 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
       <div class="container-fluid ">
         <p class="text-muted">&copy;2023 OneGlobe LLC</p>
       </div>
+	  <div class="container-fluid"><a href="https://github.com/myl15/startup">Github</a>
+	</div>
   </footer>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
