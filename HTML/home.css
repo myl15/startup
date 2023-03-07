@@ -54,7 +54,7 @@
 	  filter: url(#threshold) blur(0.6px);
   }
   #container1 {
-	  font-family: "Raleway", sans-serif;
+	  font-family: "new-kansas", sans-serif;
 	  position: absolute;
 	  text-align:center;
 	  margin: auto;
@@ -67,8 +67,8 @@
   #text2 {
 	  position: absolute;
 	  width: 100%;
-  
-	  font-family: "Raleway", sans-serif;
+		padding-top:20px;
+	  font-family: "new-kansas", sans-serif;
 	  font-size: 80pt;
   
 	  text-align: center;
@@ -98,7 +98,9 @@
 	font-weight: bold;
   }
   a:active {
-	background-color: #533294;
 	color:#533294;
-	
+  }
+
+  #header1 {
+	padding-top:10px;
   }
