@@ -39,6 +39,14 @@
 	  text-align: center;
 	  margin: 200px;
   }
+
+  form.userInfo {
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+	align-items: baseline;
+	justify-content: space-around;
+  }
   main {
 	font-family: "new-kansas", sans-serif;
 	font-weight: 400;
@@ -104,3 +112,4 @@
   #header1 {
 	padding-top:10px;
   }
+
