@@ -58,9 +58,9 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
 		</div>
 		<div class="modal-body">
 		  <form class="userInfo" id="userInfo">
-			<input type="text" id="username" placeholder="Username"></input> </br>
+			<input type="text" id="userName" placeholder="Username"></input> </br>
         <input type="password" id="userPassword" placeholder="Password"></input></br>
-        <input type="submit" id="submit">
+        <button class="btn btn-primary" onclick="login()">Login</button>
       </form>
 		</div>
 		<div class="modal-footer">
@@ -87,11 +87,11 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
           <input type="email" id="userEmail" placeholder="Email Address"></input> </br>
           <input type="text" id="username" placeholder="Create Username"></input> </br>
           <input type="password" id="userPassword" placeholder="Create Password"></input></br>
-          <input type="submit" id="submit">
+          <button class="btn btn-primary" onclick="login()">Login</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#loginModal">Returning User</button>
+        <button id ="loginButton" type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#loginModal">Returning User</button>
       </div>
       </div>
     
@@ -121,6 +121,11 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
         </filter>
     </defs>
 </svg>
+
+
+<div id="test">
+
+</div>
 <div class="travelcards">
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="https://cdn.britannica.com/62/153462-050-3D4F41AF/Grand-Canal-Venice.jpg" alt="Card image cap">
@@ -151,7 +156,7 @@ rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGL
 
     <div id="typography" class="demo-box">
       <div class="container-fluid">
-        <h2 id="header2">What is OneGlobe?</h2>
+        <h2 id="header2">What is <div id ="globe">OneGlobe?</div></h2>
         <p class="lead">In the modern era, the world feels smaller than ever.  
 			Anyone can find the information they are looking for with a few taps on their phone or clicks on their computer. 
 			You can view resource after resource about any destination anywhere on the globe! 
