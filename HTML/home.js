@@ -84,8 +84,8 @@
 var globe = document.getElementById("globe");
 globe.addEventListener("mouseover", (event) => {
     // highlight the mouseover target
-    event.target.style.color = "#C35CFF";
-    event.target.style.fontWeight = "bolder";
+    event.target.style.color = "grey";
+    event.target.style.fontWeight = "800";
     // reset the color after a short delay
     setTimeout(() => {
       event.target.style.color = "";
@@ -95,20 +95,10 @@ globe.addEventListener("mouseover", (event) => {
   false
 );
 function login() {
-    console.log("yes");
+    //console.log("yes");
     const nameEl = document.querySelector('#userName');
-    localStorage.setItem("username", nameEl.value);
-    window.location.href = "home.html";
-    setPlayerName();
-    x++;
+    localStorage.setItem("userName", nameEl.value);
+    window.location.href = "travel.html";
 }
 
-function getPlayerName() {
-    console.log("rawr");
-    return localStorage.getItem('username') ?? 'Guest';
-};
 
-function setPlayerName() {
-    const playerNameEl = document.getElementById('test');
-    playerNameEl.textContent = this.getPlayerName();
-};

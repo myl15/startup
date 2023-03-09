@@ -31,7 +31,12 @@
 	background: gray;
   }
   
-  
+  #globe, #mainHeader  {
+	font-weight: bold;
+  }
+  #typography {
+	text-align: center;
+  }
   body {
 	font-family: "new-kansas", sans-serif;
 	font-weight: 400;
