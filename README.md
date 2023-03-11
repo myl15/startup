@@ -89,3 +89,6 @@ iframe	  Inline frame of another HTML page
 
 ### CSS
 <img src="https://github.com/myl15/startup/blob/8340c83802685a0666a070710311ac351287f125/Images/CSS_Notes.png" width="600px">
+
+### JavaScript
+Javascript is the language of the internet, and is used to create interactive webpages with funcitonalities such as buttons, changing text and images, and animations.  I used javascript in my startup to create interactive slides with different captions based on the button the user selects, and to create an interactive login which displays the user's name. 
