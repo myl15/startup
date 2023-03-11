@@ -6,3 +6,53 @@
     text-align: center;
     box-sizing: border-box;
   }
+  h1 {
+    padding: 2%;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-bottom: 2px solid #bebdc0
+  }
+  #travelCarousel .carousel-item {
+    height: 500px;
+  }
+
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+   
+  }
+
+  h5.slideHeader {
+    background-color: rgb(115, 117, 119);
+    padding: 2%;
+    margin-left: 41%;
+    margin-right: 41%;
+    border-radius: .8em;
+    border: 1px solid #1b1625;
+  }
+
+  #littleLine {
+    border-bottom: 2px solid #bebdc0;
+  }
+
+  
+
+   a.profile:link {
+    text-decoration: none;
+    color:#2e2c31;
+  }
+  a.profile:visited {
+    text-decoration:none;
+    color:#2e2c31
+  }
+  a.profile:hover {
+    color:#533294;
+    border:#533294 solid;
+  }
+  a.profile:active {
+    background-color: #533294;
+    color:#533294;
+  } 
