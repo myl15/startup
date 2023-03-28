@@ -139,3 +139,19 @@ Code	Text	Meaning
 - Install any desired packages with npm install <package name here>
 - Add require('<package name here>') to your JavaScript code
 - Run your code with node main.js
+
+
+### Authorization Services
+When recording user information, you authenticate a user by taking their credentials and store an authentication token (in the form of a cookie) for a period of time. 
+Stick to trusted, well-tested, authorization services to handle the majority of authorization.
+Consider AWS Cognito and Google Firebase.
+
+#### Account Creation and Login
+Requires to service endpoints, **Create** and **Login**.
+
+Create the web service using Express. 
+
+Refer to the Simon-login files in the future for how to set up those programs.
+Use uuid to generate tokens for unique identifiers.
+Always securely store passwords.  Crytpographically hash the password and never store the actual password.  Use bcrypt package.
+Use cookieParser to handle cookies and ensure that cookies are only passed from the original site.  cookieParser has built in functions httpOnly, secure, and sameSite which we used for this project.  
