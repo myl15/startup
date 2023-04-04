@@ -89,3 +89,124 @@ iframe	  Inline frame of another HTML page
 
 ### CSS
 <img src="https://github.com/myl15/startup/blob/8340c83802685a0666a070710311ac351287f125/Images/CSS_Notes.png" width="600px">
+
+### JavaScript
+Javascript is the language of the internet, and is used to create interactive webpages with funcitonalities such as buttons, changing text and images, and animations.  I used javascript in my startup to create interactive slides with different captions based on the button the user selects, and to create an interactive login which displays the user's name. 
+
+### HTTPS
+Verbs
+There are several verbs that describe what the HTTP request is asking for. The list below only describes the most common ones.
+
+Verb	Meaning
+GET	Get the requested resource. This can represent a request to get a single resource or a resource representing a list of resources.
+POST	Create a new resource. The body of the request contains the resource. The response should include a unique ID of the newly created resource.
+PUT	Update a resource. Either the URL path, HTTP header, or body must contain the unique ID of the resource being updated. The body of the request should contain the updated resource. The body of the response may contain the resulting updated resource.
+DELETE	Delete a resource. Either the URL path or HTTP header must contain the unique ID of the resource to delete.
+OPTIONS	Get metadata about a resource. Usually only HTTP headers are returned. The resource itself is not returned.
+Status codes
+It is important that you use the standard HTTP status codes in your HTTP responses so that the client of a request can know how to interpret the response. The codes are partitioned into five blocks.
+
+1xx - Informational.
+2xx - Success.
+3xx - Redirect to some other location, or that the previously cached resource is still valid.
+4xx - Client errors. The request is invalid.
+5xx - Server errors. The request cannot be satisfied due to an error on the server.
+Within those ranges here are some of the more common codes. See the MDN documentation for a full description of status codes.
+
+Code	Text	Meaning
+100	Continue	The service is working on the request
+200	Success	The requested resource was found and returned as appropriate.
+201	Created	The request was successful and a new resource was created.
+204	No Content	The request was successful but no resource is returned.
+304	Not Modified	The cached version of the resource is still valid.
+307	Permanent redirect	The resource is no longer at the requested location. The new location is specified in the response location header.
+308	Temporary redirect	The resource is temporarily located at a different location. The temporary location is specified in the response location header.
+400	Bad request	The request was malformed or invalid.
+401	Unauthorized	The request did not provide a valid authentication token.
+403	Forbidden	The provided authentication token is not authorized for the resource.
+404	Not found	An unknown resource was requested.
+408	Request timeout	The request takes too long.
+409	Conflict	The provided resource represents an out of date version of the resource.
+418	I'm a teapot	The service refuses to brew coffee in a teapot.
+429	Too many requests	The client is making too many requests in too short of a time period.
+500	Internal server error	The server failed to properly process the request.
+503	Service unavailable	The server is temporarily down. The client should try again with an exponential back off.
+
+### Node.js
+- Create your project directory
+- Initialize it for use with NPM by running npm init -y
+- Make sure .gitignore file contains node-modules
+- Install any desired packages with npm install <package name here>
+- Add require('<package name here>') to your JavaScript code
+- Run your code with node main.js
+
+
+### Authorization Services
+When recording user information, you authenticate a user by taking their credentials and store an authentication token (in the form of a cookie) for a period of time. 
+Stick to trusted, well-tested, authorization services to handle the majority of authorization.
+Consider AWS Cognito and Google Firebase.
+
+#### Account Creation and Login
+Requires to service endpoints, **Create** and **Login**.
+
+Create the web service using Express. 
+
+Refer to the Simon-login files in the future for how to set up those programs.
+Use uuid to generate tokens for unique identifiers.
+Always securely store passwords.  Crytpographically hash the password and never store the actual password.  Use bcrypt package.
+Use cookieParser to handle cookies and ensure that cookies are only passed from the original site.  cookieParser has built in functions httpOnly, secure, and sameSite which we used for this project.  
+
+
+### Websocket
+Websocket was created to solve problems created by the client/server model of HTTP.  It creates a peer to peer connection after an initial connection to the server, allowing for more efficient sharing of data between parties. 
+
+#### Debugging Websocket
+
+1. Create a directory named `testWebSocket` and change to that directory.
+1. Run `npm init -y`.
+1. Run `npm install ws`.
+1. Open VS Code and create a file named `main.js`. Paste the following code.
+
+   ```js
+   const { WebSocketServer } = require('ws');
+
+   const wss = new WebSocketServer({ port: 9900 });
+
+   wss.on('connection', (ws) => {
+     ws.on('message', (data) => {
+       const msg = String.fromCharCode(...data);
+       console.log('received: %s', msg);
+
+       ws.send(`I heard you say "${msg}"`);
+     });
+
+     ws.send('Hello webSocket');
+   });
+   ```
+
+1. Set breakpoints on the `ws.send` lines so you can inspect the code executing.
+1. Start debugging by pressing `F5`. The first time you may need to choose Node.js as the debugger.
+
+Debugging the client
+
+1. Open the Chrome debugger by pressing `F12`.
+1. Paste this code into the debugger console window and press enter to execute it. Executing this code will immediately hit the server breakpoint. Take a look at what is going on and then remove the breakpoint from the server.
+
+   ```js
+   const socket = new WebSocket('ws://localhost:9900');
+
+   socket.onmessage = (event) => {
+     console.log('received: ', event.data);
+   };
+   ```
+
+1. Select the `Network` tab and then select the HTTP message that was generated by the execution of the above client code.
+1. With the HTTP message selected, you then click the `Messages` tab to view the WebSocket messages
+1. Send a message to the server by executing the following in the debugger console window. This will cause the second server breakpoint to hit. Explore and then remove the breakpoint from the server.
+   ```js
+   socket.send('I am listening');
+   ```
+1. You should see the messages in the `Messages` debugger window.
+1. Send some more messages and observe the communication back and forth without stopping on the breakpoints.
+
+After looking through the new code in the Simon repository, I don't know if I feel like I understand it.  I understand what each of the functions is doing, but I don't feel confident that I could achieve what I want with Websocket if I had to do it on my own.  There are a lot of steps in the peerProxy.js file and in the other Javascript files to handle websocket peer to peer communication.  But I did learn some new things from reading over it.
