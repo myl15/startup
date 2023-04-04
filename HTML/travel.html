@@ -13,8 +13,49 @@
   <title>Travel</title>
 </head>
 <main>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a href="home.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+</svg>
+          <h1 id="mainHeader">OneGlobe</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="travel.html">Travel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="index.html">About Us</a>
+            </li>
+            <li class="nav-item">
+          </ul>
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+          		<form class="d-flex" role="search">
+           			<input class="form-control me-2" type="search" placeholder="Search" <button class="btn btn-outline-success" type="submit"/>
+          		</form>
+			</li>
+			<li class="nav-item">
+				<button type="button" id="userLoginButton" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+					Log In
+				  </button>
+			</li>
+		</ul>
+        </div> 
+      </div>
+    </nav>
+  </header>
 <header>
-    <h1>Welcome <span id="userHeader"></span></h1>
+    <h1 id="smallHeader">Welcome <span id="userHeader"></span></h1>
 </header>
 <body>
   <div id="travelCarousel" class="carousel slide" data-ride="carousel">
@@ -51,6 +92,11 @@
 </br>
 </br>
 <div id="littleLine"></div>
+
+<P> 
+<h2></h2>
+
+</P>
   <script src="travel.js"></script>
 </main>
 <footer class="sticky-bottom text-center text-dark">
