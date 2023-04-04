@@ -45,8 +45,8 @@
           		</form>
 			</li>
 			<li class="nav-item">
-				<button type="button" id="userLoginButton" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
-					Log In
+				<button type="button" id="userLoginButton" class="btn btn-light" onclick="window.location.href = './profile.html'">
+					Profile
 				  </button>
 			</li>
 		</ul>
@@ -93,10 +93,25 @@
 </br>
 <div id="littleLine"></div>
 
-<P> 
-<h2></h2>
+<body> 
+<h1>Reservations</h1>
+<p>
+  Welcome to OneGlobe travel!  Here you can make a reservation for your next vacation, wherever that may be.  View your previous reservations under the profile tab.
+</p>
+<table>
+  <tr>
+    <td><input type="text" id="destination" placeholder="Enter your destination"></td>
+    <td><input type="date" id="date"></td>
+  </tr>
+  <tr>
+    <td><input type="number" id="numDays" placeholder="How many days?"></td>
+    <td><input type="number" id="numPeople" placeholder="How many people?"></td>
+  </tr>
+</table>
+<input type="button" id="submitButton" onclick="makeReservation()" value="Submit"/>
 
-</P>
+
+</body>
   <script src="travel.js"></script>
 </main>
 <footer class="sticky-bottom text-center text-dark">

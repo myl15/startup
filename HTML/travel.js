@@ -27,6 +27,38 @@ function setPlayerName() {
     }
 };
 
+async function makeReservation() {
+    const destination = document.getElementById("destination")?.value;
+    const date = document.getElementById("date")?.value;
+    const numDays = document.getElementById("numDays")?.value;
+    const numPeople = document.getElementById("numPeople")?.value;
+    const newReservation = { destination: destination, startDate: date, numDays: numDays, numPeople: numPeople };
+
+    try {
+        const response = await fetch('/api/reservation', {
+            method: 'Post',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(newReservation),
+        });
+
+        const reservations = await response.json();
+        localStorage.setItem('reservations', JSON.stringify(reservations));
+
+    } catch {
+       updateReservationsLocal(newReservation);
+    }
+}
+
+function updateReservationsLocal(newReservation) {
+    let reservations = [];
+    const reservationsText = localStorage.getItem('reservations');
+    if (reservationsText) {
+        reservations = JSON.parse(reservationsText);
+    }
+
+    localStorage.setItem('reservations', JSON.stringify(reservations));
+}
+
 function visitItaly() {
     if (hasText >= 1) {
         removeText();

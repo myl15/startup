@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database');
+const LG = require('./login.js')
 
 const authCookieName = 'token';
 

@@ -25,8 +25,8 @@ async function createUser() {
 }
 
 async function create(endpoint) {
-    const userName = document.getElementById('userName')?.value;
-    const password = document.querySelector('#userPassword')?.value;
+    const userName = document.getElementById('newuserName')?.value;
+    const password = document.querySelector('#newuserPassword')?.value;
     const userEmail = document.querySelector('#userEmail')?.value;
     const firstName = document.querySelector('#firstName')?.value;
     const lastName = document.querySelector('#lastName')?.value;
