@@ -10,6 +10,7 @@
     }
 
     if (authenticated) {
+		document.querySelector('#playerName').textContent = userName;
         // Not sure what I need here
     }
 })();
