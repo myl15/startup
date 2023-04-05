@@ -1,10 +1,9 @@
 (async () => {
     let authenticated = false;
-    const userName = localStorage.getItem('userName');
+    const userName = localStorage.getItem('userEmail');
     if(userName) {
         const nameEl = document.getElementById('userName')
         nameEl.value = userName;
-        user = await getUserByName(nameEl.value);
         user = await getUserByEmail(nameEl.value);
         authenticated = user?.authenticated;
 

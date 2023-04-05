@@ -1,3 +1,6 @@
+
+
+
 var getItalyEl = document.getElementById("visitItaly");
 getItalyEl.addEventListener("click", visitItaly);
 
@@ -10,6 +13,48 @@ domesticTravelEl.addEventListener("click", domesticTravel);
 let hasText = 0;
 
 setPlayerName();
+getStuff();
+
+function displayPicture(data) {
+    const containerEl = document.querySelector("#picture");
+    containerEl.style.padding = "2em";
+    
+    //console.log(data.originator.name);
+    const quoteEl = document.createElement("p");
+    quoteEl.classList.add("quote");
+    const authorEl = document.createElement("p");
+    authorEl.classList.add("author");
+
+    quoteEl.textContent = data.content;
+    authorEl.textContent = data.originator.name;
+
+    containerEl.appendChild(quoteEl);
+    containerEl.appendChild(authorEl);
+}
+
+function getStuff() {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '3fdb9fefa9mshe50f9928108b33cp1caa64jsn585cd7dc336e',
+            'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+        }
+    };
+
+    // let random = Math.floor(Math.random() * 1000);
+    // random = random % 8;
+    // let countryList = ['IT', 'US', 'UG', 'TW', 'ES', 'PH', 'NO', 'NP'];
+    // let country = countryList[random];
+    // random = Math.floor(Math.random() * 1000) % 6;
+    // let categoryList = ['beach', 'forest', 'mountain', 'city', 'water', 'area'];
+    // let category = categoryList[random];
+    
+    fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+	.then(response => response.json())
+	.then(response => displayPicture(response))
+	.catch(err => console.error(err));
+}
+
 
 function getPlayerName() {
     //console.log("rawr");
