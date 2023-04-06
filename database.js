@@ -42,20 +42,22 @@ async function createUser(email, password, userName) {
     return user;
 }
 
-function addReservation(destination, startDate, numDays, numPeople) {
+function addReservation(user, destination, startDate, numDays, numPeople) {
     const reservation = {
-        //user: getUserByToken()
+        user: user,
         destination: destination,
         startDate: startDate,
         numDays: numDays,
         numPeople: numPeople,
     };
     reservationCollection.insertOne(reservation);
+	return reservation;
 }
 
 function getReservations() {
-    const query = {};
-    const cursor = scoreCollection.find()
+    // const query = {};
+    const cursor = reservationCollection.find();
+	return cursor.toArray();
 }
 
 module.exports = {

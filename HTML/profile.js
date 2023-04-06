@@ -34,28 +34,36 @@ async function loadRes() {
 function displayReservations(reservations) {
     const tableBodyEl = document.querySelector('#reservations');
 
-    if (reservations.legnth) {
-        for (const [i, reservation] of reservations.length()) {
-            const positionTdEl = document.createElement('td');
-            const nameTdEl = document.createElement('td');
-            const scoreTdEl = document.createElement('td');
-            const dateTdEl = document.createElement('td');
+    if (reservations.length) {
+		//console.log(reservations.length);
+        reservations.forEach(function(item, index) {
+			console.log(item.user);
+			console.log(document.getElementById('userName').textContent);
+			if (item.user === document.getElementById('userName').textContent) {
+			
+				const nameTdEl = document.createElement('td');
+				console.log(item.destination);
+				const dateTdEl = document.createElement('td');
+				const numDaysTdEl = document.createElement('td');
+				const numPeopleTdEl = document.createElement('td');
+				
 
-            positionTdEl.textContent = i + 1;
-            nameTdEl.textContent = reservation.destination;
-            dateTdEl.textContent = reservation.date;
-            numDaysTdEl.textContent = reservation.numDays;
-            numPeopleTdEl.textConten = reservation.numPeople;
+			
+				nameTdEl.textContent = item.destination;
+				dateTdEl.textContent = item.startDate;
+				numDaysTdEl.textContent = item.numDays;
+				numPeopleTdEl.textContent = item.numPeople;
 
-            const rowEl = document.createElement('tr');
-            rowEl.appendChild(positionTdEl);
-            rowEl.appendChild(nameTdEl);
-            rowEl.appendChild(dateTdEl);
-            rowEl.appendChild(numDaysTdEl);
-            rowEl.appendChild(numPeopleTdEl);
+				const rowEl = document.createElement('tr');
+				
+				rowEl.appendChild(nameTdEl);
+				rowEl.appendChild(dateTdEl);
+				rowEl.appendChild(numDaysTdEl);
+				rowEl.appendChild(numPeopleTdEl);
 
-            tableBodyEl.appendChild(rowEl);
-        }
+				tableBodyEl.appendChild(rowEl);
+			}
+        });
     } else {
         tableBodyEl.innerHTML = '<tr><td colSpan= 4> Book a reservation under the Travel tab!</td></tr>'
     }

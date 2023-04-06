@@ -73,14 +73,16 @@ function setPlayerName() {
 };
 
 async function makeReservation() {
+	const user = document.getElementById('userHeader').textContent;
     const destination = document.getElementById("destination")?.value;
     const date = document.getElementById("date")?.value;
     const numDays = document.getElementById("numDays")?.value;
     const numPeople = document.getElementById("numPeople")?.value;
-    const newReservation = { destination: destination, startDate: date, numDays: numDays, numPeople: numPeople };
+
+    const newReservation = { user: user, destination: destination, startDate: date, numDays: numDays, numPeople: numPeople };
 
     try {
-        const response = await fetch('/api/reservation', {
+        const response = await fetch('/api/reservations', {
             method: 'Post',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newReservation),

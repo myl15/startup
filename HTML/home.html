@@ -64,11 +64,11 @@
 		  <h4 class="modal-title">Login</h4>
 		</div>
 		<div class="modal-body">
-		  <form class="userInfo" id="userInfo">
+		  <div class="userInfo" id="userInfo" onsubmit="(e)=>e.preventDefault()">
 			<input type="text" id="userName" placeholder="Username"></input> </br>
         <input type="password" id="userPassword" placeholder="Password"></input></br>
         <button class="btn btn-primary" onclick="loginUser()">Login</button>
-      </form>
+		  </div>
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#newUserModal">New User</button>
@@ -88,14 +88,14 @@
         <h4 class="modal-title">Create New Account</h4>
       </div>
       <div class="modal-body">
-        <form class="userInfo" id="newuserInfo">
+        <div class="userInfo" id="newuserInfo" onsubmit="(e)=>e.preventDefault()">
           <input type="text" id="firstName" placeholder="First Name"></input> </br>
           <input type="text" id="lastName" placeholder="Last Name"></input> </br>
           <input type="email" id="userEmail" placeholder="Email Address"></input> </br>
           <input type="text" id="newuserName" placeholder="Create Username"></input> </br>
           <input type="password" id="newuserPassword" placeholder="Create Password"></input></br>
           <button class="btn btn-primary" onclick="createUser()">Login</button>
-        </form>
+		</div>
       </div>
       <div class="modal-footer">
         <button id ="loginButton" type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#loginModal">Returning User</button>

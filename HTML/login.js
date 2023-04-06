@@ -17,7 +17,7 @@
 
 async function loginUser() {
     login(`/api/auth/login`);
-    window.location.href = "travel.html";
+    
 }
 
 async function createUser() {
@@ -41,7 +41,7 @@ async function create(endpoint) {
 
     if (response?.status === 200) {
         localStorage.setItem('userName', userName);
-        window.location.href = 'travel.html';
+       // window.location.href = 'travel.html';
     } else {
         const modalEl = document.querySelector('#msgModal');
         modalEl.querySelector('.modal-body').textContent = `Error: ${body.msg}`;

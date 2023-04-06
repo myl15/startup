@@ -13,13 +13,13 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(express.static('public'));
+app.use(express.static('HTML'));
 
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 apiRouter.post('/auth/create', async (req, res) => {
-  if (await DB.getUser(req.body.email)) {
+  if (await DB.getUserByEmail(req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
     const user = await DB.createUser(req.body.email, req.body.password);
@@ -31,10 +31,11 @@ apiRouter.post('/auth/create', async (req, res) => {
   }
 });
 
-apiRouter.post('auth/login', async (req, res) => {
-  const user = await DB.getUser(req.body.email);
+apiRouter.post('/auth/login', async (req, res) => {
+  const user = await DB.getUserByEmail(req.body.email);
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
+		console.log(user);
       setAuthCookie(res, user.token);
       res.send({ id: user._id });
       return;
@@ -48,7 +49,7 @@ apiRouter.delete('/auth/logout', (_req, res) => {
   res.status(204).end();
 });
 
-apiRouter.get('/user/:email', async (req, res) => {
+apiRouter.get('/user/email', async (req, res) => {
   const user = await DB.getUserByEmail(req.params.email);
   if (user) {
     const token = req?.cookies.token;
@@ -85,8 +86,9 @@ secureApiRouter.get('/reservations', async (req,res) => {
 })
 
 //Create a new reservation
-secureApiRouter.post('/reservation', async (req, res) => {
-  await DB.addReservation(req.body.destination, req.body.startDate, req.body.numDays, req.body.numPeople);
+secureApiRouter.post('/reservations', async (req, res) => {
+
+  await DB.addReservation(req.body.user, req.body.destination, req.body.startDate, req.body.numDays, req.body.numPeople);
   const reservations = await DB.getReservations();
   res.send(reservations);
 });
