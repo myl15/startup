@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(express.static('HTML'));
+app.use(express.static('public'));
 
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
@@ -98,7 +98,7 @@ app.use(function (err, req, res, next) {
 });
 
 app.use((_req, res) => {
-  res.sendFile('home.html', { root: 'HTML' });
+  res.sendFile('home.html', { root: 'public' });
 });
 
 function setAuthCookie(res, authToken) {
