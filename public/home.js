@@ -1,4 +1,4 @@
-var globe = document.getElementById("globe");
+var globe = document.getElementById("mainHeader");
 globe.addEventListener("mouseover", (event) => {
     // highlight the mouseover target
     event.target.style.color = "grey";
