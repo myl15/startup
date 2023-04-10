@@ -18,6 +18,14 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+function setAuthCookie(res, authToken) {
+	res.cookie(authCookieName, authToken, {
+	  secure: true,
+	  httpOnly: true,
+	  sameSite: 'strict',
+	});
+  }
+
 apiRouter.post('/auth/create', async (req, res) => {
   if (await DB.getUserByEmail(req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
@@ -98,16 +106,10 @@ app.use(function (err, req, res, next) {
 });
 
 app.use((_req, res) => {
-  res.sendFile('home.html', { root: 'public' });
+  res.sendFile('index.html', { root: 'public' });
 });
 
-function setAuthCookie(res, authToken) {
-  res.cookie(authCookieName, authToken, {
-    secure: true,
-    httpOnly: true,
-    sameSite: 'strict',
-  });
-}
+
 
 function login() {
     //console.log("yes");
