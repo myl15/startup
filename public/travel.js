@@ -90,6 +90,10 @@ async function makeReservation() {
 
         const reservations = await response.json();
         localStorage.setItem('reservations', JSON.stringify(reservations));
+        const modalEl = document.querySelector('#msgModal');
+        modalEl.querySelector('.modal-body').textContent = `Reservation created succesfully.`;
+        const msgModal = new bootstrap.Modal(modalEl, {});
+        msgModal.show();
 
     } catch {
        updateReservationsLocal(newReservation);

@@ -61,11 +61,13 @@ text-decoration:none;
 color:#2e2c31
 }
 a:hover {
+text-decoration:none;
 color:#533294;
 font-weight: bold;
 }
 a:active {
-color:#533294;
+  text-decoration: none;
+  color:#533294;
 }
 table {
   display: flex;

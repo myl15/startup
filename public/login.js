@@ -41,10 +41,11 @@ async function create(endpoint) {
 
     if (response?.status === 200) {
         localStorage.setItem('userName', userName);
-       // window.location.href = 'travel.html';
+        window.location.href = 'travel.html';
     } else {
         const modalEl = document.querySelector('#msgModal');
         modalEl.querySelector('.modal-body').textContent = `Error: ${body.msg}`;
+        const msgModal = new bootstrap.Modal(modalEl, {});
         msgModal.show();
     }
 }
@@ -68,6 +69,7 @@ async function login(endpoint) {
     } else {
         const modalEl = document.querySelector('#msgModal');
         modalEl.querySelector('.modal-body').textContent = `Error: ${body.msg}`;
+        const msgModal = new bootstrap.Modal(modalEl, {});
         msgModal.show();
     }
 }
