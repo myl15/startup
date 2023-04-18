@@ -1,2 +1,4 @@
 node_modules/
 .vscode/
+service/node_modules
+Images/
