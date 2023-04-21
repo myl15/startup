@@ -210,3 +210,17 @@ Debugging the client
 1. Send some more messages and observe the communication back and forth without stopping on the breakpoints.
 
 After looking through the new code in the Simon repository, I don't know if I feel like I understand it.  I understand what each of the functions is doing, but I don't feel confident that I could achieve what I want with Websocket if I had to do it on my own.  There are a lot of steps in the peerProxy.js file and in the other Javascript files to handle websocket peer to peer communication.  But I did learn some new things from reading over it.
+
+
+### Final Review
+1. Port 80 is reserved for HTTP
+1. HTTP status codes in the 300 range are for Content redirects or caching
+1. Standard HTTP headers include: Content-type, Host, and Cookie
+1. Cookies allo a server to store data on the client
+1. App.use *always* comes before any other HTTP method, regardless of the method. It is a prefix path 
+1. Hashing passwords is important because it improves security for users, making passwords unreadable
+1. Websocket allows peer to peer communication rather than client to server communication.
+1. The purpose of JSX is to inject HTML into JavaScript, componentize HTML, and allow for composability of HTML
+1. Routes have paths which lead to a specific element
+1. Fetch can be used in front end and back end code
+1. Linux daemons do the following: execute independent of a user, start when a computer is rebooted, PM2 is an example.  Daemons do not fork other processes.
